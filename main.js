@@ -103,7 +103,15 @@ const quotes = [
 
 const showQuote = () => {
   const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-  return randomQuote;  
+  // Construct the formatted string with line breaks
+  const formattedQuote = `
+"${randomQuote.quote}"
+
+- ${randomQuote.author}
+(${randomQuote.type})
+`;
+
+  return formattedQuote;  
 };
 
 console.log(showQuote())
